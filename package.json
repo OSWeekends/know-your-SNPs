@@ -36,6 +36,7 @@
     "express": "^4.14.0",
     "express-fileupload": "0.0.5",
     "gql": "^1.1.0",
-    "method-override": "^2.3.6"
+    "method-override": "^2.3.6",
+    "pug": "^2.0.0-beta6"
   }
 }
