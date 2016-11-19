@@ -1,0 +1,76 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='Open Source Weekends')
+    title Know Your SNPs | An Open Source Project
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/bootstrap-theme.min.css', rel='stylesheet')
+    link(href='css/starter-template.css', rel='stylesheet')
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', rel='stylesheet')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Know Your SNPs
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='https://github.com/OSWeekends/know-your-SNPs/blob/master/README.md') About
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(target='_blank', href='https://github.com/OSWeekends/know-your-SNPs')
+                | We 
+                i.fa.fa-heartbeat(aria-hidden='true')
+                |  Open Source
+    .container
+      .starter-template
+        if datos
+            h1 The results are....
+            each element in datos
+                h3 #{element.description}
+                h4.text-muted #{element.value}
+        else 
+            h1 Know Your SNPs
+            p.lead
+              | Are you ready to know what is in your DNA?.
+            form#form.col-md-6.col-md-offset-3(action='/results', method='POST', enctype='multipart/form-data')
+              .form-group
+                h3 File input
+                input#file(type='file', name='archivo_adn')
+                p.help-block Attach an DNA valid file only if you want to use your personal data...
+              .form-group
+                h3 Available Queries
+                p.help-block Choose at least one.
+              .checkbox
+                label
+                  input#norovirus(type='checkbox', name='norovirus')
+                  |  Norovirus Inmunity
+              .checkbox
+                label
+                  input#gendermale(type='checkbox', name='gendermale')
+                  |  Male Gender
+              .checkbox
+                label
+                  input#ginger(type='checkbox', name='redhead')
+                  |  Redhead  
+              button#btn.btn.btn-default(type='submit', name='action') I'm ready to know
+    footer.footer
+      .container
+        p.text-muted.text-center
+          | Know Your SNPs  
+          i.fa.fa-code(aria-hidden='true')
+          |  with 
+          i.fa.fa-heart(aria-hidden='true')
+          |  by Open Source Weekends & individual contributors | GNU GPL-3.0
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/app.js')
