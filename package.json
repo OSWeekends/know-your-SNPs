@@ -31,7 +31,10 @@
   },
   "homepage": "https://github.com/OSWeekends/know-your-SNPs#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-fileupload": "0.0.5",
     "gql": "^1.1.0",
-    "pillars": "^0.3.7"
+    "method-override": "^2.3.6"
   }
 }
