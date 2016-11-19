@@ -1,0 +1,42 @@
+{
+  "name": "konw-your-snps",
+  "version": "0.1.0",
+  "description": "proyecto sobre ADN usando genome.js ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OSWeekends/know-your-SNPs.git"
+  },
+  "keywords": [
+    "genome",
+    "adn"
+  ],
+  "author": "Open Source Weekends",
+  "contributors": [
+    {
+      "name": "Jose Manuel Gallego Chamorro",
+      "url": "https://github.com/Josheriff"
+    },
+    {
+      "name": "Ulises Gascón",
+      "url": "https://github.com/ulisesGascon"
+    }
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/OSWeekends/know-your-SNPs/issues"
+  },
+  "homepage": "https://github.com/OSWeekends/know-your-SNPs#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "dna2json": "^1.0.1",
+    "express": "^4.14.0",
+    "express-fileupload": "0.0.5",
+    "gql": "^1.1.0",
+    "method-override": "^2.3.6",
+    "pug": "^2.0.0-beta6"
+  }
+}
