@@ -1,8 +1,23 @@
 var gql = require('gql');
 
 var queries = {
+    redhead: function(adn){
+      var isRedhead = gql.atLeast(1, [
+        gql.has('rs1805009', 'C'),
+        gql.has('rs1805009', 'T'),
+        gql.has('rs1805008', 'T'),
+        gql.has('rs1805006', 'A')
+      ])
+      return {
+        "description": "Are you redhead?", 
+        "value": isRedhead(adn)
+      }
+    },
     norovirus: function(adn){
-        return adn.rs601338.genotype == 'AA'
+        return {
+          "description": "Are you inmune to Norovirus?",
+          "value": adn.rs601338.genotype == 'AA'
+        }
     },
     gendermale: function(adn){
         var isMale = gql.atLeast(2, [
@@ -28,8 +43,10 @@ var queries = {
           ])
         ]);
         
-        return isMale(adn);
-        
+        return {
+          "description": "Are you a Men?",
+          "value": isMale(adn)
+        };
     }
 }
 
