@@ -21,7 +21,7 @@ var queries = {
     },
      diabetes: function(adn){
     var hasDiabetes =  gql.atLeast(2, [
-    gql.exact('rs17388568', 'AA’),
+    gql.exact('rs17388568', 'AA'),
     gql.exact('rs17388568', 'AG'),]);
     return {
         "description": "Can you develop Diabetes?", 
