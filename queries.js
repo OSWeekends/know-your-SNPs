@@ -24,7 +24,7 @@ var queries = {
     gql.exact('rs17388568', 'AA'),
     gql.exact('rs17388568', 'AG'),]);
     return {
-        "description": "Can you develop Diabetes?", 
+        "description": "are you in risk of developing type-1 diabetes?", 
         "value": hasDiabetes(adn)
       }
     },
