@@ -19,6 +19,16 @@ var queries = {
           "value": adn.rs601338.genotype == 'AA'
         }
     },
+     diabetes: function(adn){
+    var hasDiabetes =  gql.atLeast(2, [
+    gql.exact('rs17388568', 'AA’),
+    gql.exact('rs17388568', 'AG'),]);
+    return {
+        "description": "Can you develop Diabetes?", 
+        "value": hasDiabetes(adn)
+      }
+    },
+    
     gendermale: function(adn){
         var isMale = gql.atLeast(2, [
           gql.exact('rs2032651', 'D'),
@@ -44,7 +54,7 @@ var queries = {
         ]);
         
         return {
-          "description": "Are you a Men?",
+          "description": "Are you a Man?",
           "value": isMale(adn)
         };
     }
