@@ -4,7 +4,9 @@
   "description": "proyecto sobre ADN usando genome.js ",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -37,6 +39,8 @@
     "express-fileupload": "0.0.5",
     "gql": "^1.1.0",
     "method-override": "^2.3.6",
-    "pug": "^2.0.0-beta6"
-  }
+    "pug": "^2.0.0-beta6",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
